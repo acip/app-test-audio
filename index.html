@@ -20,10 +20,16 @@
         // device APIs are available
         //
         function onDeviceReady() {
-			alert(typeof Media);
 
-			var audio = document.getElementById('id1');
-      		audio.addEventListener('touchstart', function() { audio.play(); }, false);
+			var file = 'U1_E1.mp3';
+			file = '/android_asset/www/' + file;
+			my_media = new Media(file);
+
+            // Play audio
+            my_media.play();
+
+			// var audio = document.getElementById('id1');
+   //    		audio.addEventListener('click', function() { audio.play(); }, false);
         }
 
 
