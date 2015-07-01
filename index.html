@@ -14,24 +14,24 @@
 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script>
+alert(typeof Media);
 
+// function yes_1() {
+// 	var file = 'U1_E1.mp3';
+// 	//if ( (typeof device != 'undefined') && (device.platform == 'Android') ) {
+// 		file = '/android_asset/www/' + file;
+// 	//	}
 
-function yes_1() {
-	var file = 'U1_E1.mp3';
-	//if ( (typeof device != 'undefined') && (device.platform == 'Android') ) {
-		file = '/android_asset/www/' + file;
-	//	}
-
-	alert(typeof Media);
-if (typeof Media != 'undefined') {
-	new Media( file ).play();
-}
-else {
-	var audio = document.createElement('audio');
-	audio.src = file;
-	audio.play();
-	}
-}
+// 	alert(typeof Media);
+// if (typeof Media != 'undefined') {
+// 	new Media( file ).play();
+// }
+// else {
+// 	var audio = document.createElement('audio');
+// 	audio.src = file;
+// 	audio.play();
+// 	}
+// }
 
 
 
