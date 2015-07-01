@@ -12,5 +12,18 @@
 
 <audio id="id1" src="U1_E1.mp3" autoplay controls></audio>
 
+
+
+   <script>
+
+      var audio = document.getElementById('id1');
+      audio.addEventListener('touchstart', function() { audio.play(); }, false);
+
+
+	  var androidVersion = navigator.userAgent.slice(navigator.userAgent.toLowerCase().indexOf('android')+8);
+	  //var isPreAndroid4 = navigator.userAgent.toLowerCase().indexOf("android") > 4;
+	  var isPreAndroid4 = parseInt(navigator.userAgent.slice(navigator.userAgent.toLowerCase().indexOf('android')+8)) < 4;
+	  alert(isPreAndroid4 + ' - ' + parseFloat(androidVersion) + ' - ' + parseInt(androidVersion));
+   </script>
 </body>
 </html>
