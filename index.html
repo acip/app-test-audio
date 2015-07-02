@@ -29,14 +29,13 @@
 				var file = audioElement.getAttribute('src');
 				file = '/android_asset/www/' + file;
 
+				alert(file);
+				alert(Media);
 
-				 alert(file);
-				// alert(Media);
+				var my_media = new Media(file);
+				alert(my_media);
 
-				// var my_media = new Media(file);
-				// alert(my_media);
-
-				// my_media.play();
+				my_media.play();
 			}
 		}
 
