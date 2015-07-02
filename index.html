@@ -22,6 +22,7 @@
 		document.addEventListener("deviceready", (function(el) { play(el); } )(audioElement), false);
 
 		function play(audioElement) {
+							alert(Media);
 			if (!isAndroid4()) {
 				audioElement.play();
 			} else {
@@ -30,7 +31,7 @@
 				file = '/android_asset/www/' + file;
 
 				alert(file);
-				alert(Media);
+
 
 				var my_media = new Media(file);
 				alert(my_media);
