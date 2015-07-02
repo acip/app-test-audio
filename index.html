@@ -10,74 +10,27 @@
 <body>
 
 
-<audio id="id1" src="U1_E1.mp3"></audio>
+<audio id="id1" src="/android_asset/www/U1_E1.mp3" autoplay controls preload="auto"></audio>
 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script>
 
-(function (window) {
+		document.addEventListener("deviceready", onDeviceReady, false);
 
-	window.playAudio =  function(audioElement) {
+        // device APIs are available
+        //
+        function onDeviceReady() {
 
-		document.addEventListener("deviceready", (function(el) { play(el); } )(audioElement), false);
+			var file = 'U1_E1.mp3';
+			file = '/android_asset/www/' + file;
+			my_media = new Media(file);
 
-		function play(audioElement) {
-							alert(Media);
-			if (!isAndroid4()) {
-				audioElement.play();
-			} else {
-				//autoplay for android 4.x
-				var file = audioElement.getAttribute('src');
-				file = '/android_asset/www/' + file;
+            // Play audio
+            my_media.play();
 
-				alert(file);
-
-
-				var my_media = new Media(file);
-				alert(my_media);
-
-				my_media.play();
-			}
-		}
-
-	};
-
-
-	function isAndroid4() {
-
-		var ua = navigator.userAgent.toLowerCase();
-		alert(ua);
-		var isAndroid4x = parseInt(ua.slice(ua.indexOf('android') + 8)) === 4;
-		alert(isAndroid4x);
-
-		return isAndroid4x;
-	}
-
-
-})(window);
-
-	playAudio(document.getElementById('id1'));
-
-
-
-
-
-		// document.addEventListener("deviceready", onDeviceReady, false);
-
-  //       // device APIs are available
-  //       //
-  //       function onDeviceReady() {
-
-		// 	var file = 'U1_E1.mp3';
-		// 	file = '/android_asset/www/' + file;
-		// 	my_media = new Media(file);
-
-  //           // Play audio
-  //           my_media.play();
-
-		// 	// var audio = document.getElementById('id1');
-  //  //    		audio.addEventListener('click', function() { audio.play(); }, false);
-  //       }
+			// var audio = document.getElementById('id1');
+   //    		audio.addEventListener('click', function() { audio.play(); }, false);
+        }
 
 
 
