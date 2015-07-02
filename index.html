@@ -10,7 +10,7 @@
 <body>
 
 
-<audio id="id1" src="U1_E1.mp3" autoplay></audio>
+<audio id="id1" src="U1_E1.mp3"></audio>
 
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script>
@@ -29,13 +29,14 @@
 				var file = audioElement.getAttribute('src');
 				file = '/android_asset/www/' + file;
 
-				alert(Media);
-				alert(file);
 
-				var my_media = new Media(file);
-				alert(my_media);
+				 alert(file);
+				// alert(Media);
 
-				my_media.play();
+				// var my_media = new Media(file);
+				// alert(my_media);
+
+				// my_media.play();
 			}
 		}
 
@@ -45,9 +46,11 @@
 	function isAndroid4() {
 
 		var ua = navigator.userAgent.toLowerCase();
-		var isAndroid4 = parseInt(ua.slice(ua.indexOf('android') + 8)) === 4;
+		alert(ua);
+		var isAndroid4x = parseInt(ua.slice(ua.indexOf('android') + 8)) === 4;
+		alert(isAndroid4x);
 
-		return isAndroid4;
+		return isAndroid4x;
 	}
 
 
